@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create a Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #blog-title {
+            font-size: 24px;
+        }
+
+        #blog-content {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Create a Blog</h1>
+        <form id="blog-form" action="" method="post">
+            <label for="blog-title">Title:</label>
+            <input type="text" id="blog-title" name="blog-title" placeholder="Enter the title of your blog">
+            <label for="blog-content">Content:</label>
+            <textarea id="blog-content" name="blog-content" rows="6" placeholder="Write your blog content here"></textarea>
+            <button type="submit">Publish Blog</button>
+        </form>
+    </div>
+</body>
+</html>

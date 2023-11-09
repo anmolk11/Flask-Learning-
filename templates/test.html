@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block body %}
+<body>
+    <style>
+        /* Blog posts container */
+        .blog-posts {
+            margin: 20px;
+        }
+
+        /* Individual blog post styling */
+        .blog-post {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .blog-post h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .blog-content {
+            font-size: 16px;
+            color: #444;
+        }
+
+        .blog-date {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+    </style>
+
+    <div class="blog-posts">
+        {% for post in posts %}
+            <div class="blog-post">
+                <h2><a href="posts/{{ post.slug }}">{{ post.title }}</a></h2>
+                <p class="blog-content">{{ post.content[:100] }}...</p>
+                <div class="blog-date">{{ post.date }}</div>
+                <hr>
+            </div>
+        {% endfor %}
+    </div>
+    <a class="btn btn-primary float-left" href="{{prev}}">Previous</a>
+    <a class="btn btn-primary float-right" href="{{next}}">Next</a>
+</body>
+{% endblock %}
